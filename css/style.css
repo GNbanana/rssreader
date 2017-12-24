@@ -191,7 +191,7 @@ header .header-title p{
 
 .sub-title{
     width: 90%;
-    margin: 25px auto 10px auto;
+    margin: 25px auto 10px auto !important;
     color: #333;
     text-align: center;
     font-size: 1rem;
@@ -204,7 +204,7 @@ header .header-title p{
     line-height: 20px;
     overflow: hidden;
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto !important;
     font-size: 0.85rem;
     color: #666;
     text-indent: 2em;
@@ -220,7 +220,7 @@ header .header-title p{
 .sub-footer .sub-link{
     position: absolute;
     left: 10px;
-    top: -10px;
+    top: -50px;
     opacity: 0.7;
     font-size: .8rem;
 }
@@ -480,7 +480,7 @@ header .header-title p{
 }
 
 .personal-setting .content h2{
-    margin: 40px 0;
+    margin: 40px 0 !important;
 }
 
 
