@@ -1,0 +1,656 @@
+*{
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: url("../images/bg.jpg") repeat;
+}
+p,h1,h2,h3,h4,h5,h6{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+ul,li{
+    list-style: none;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+*,:after,:before{
+    box-sizing:border-box;
+}
+
+input, button {
+    outline: none;
+    border: none;
+}
+
+
+
+.main{
+    width: 100%;
+    position: relative;
+}
+
+
+/**************************       header     *************************/
+header .content{
+    background: rgba(242,182,50,0.4);
+    box-shadow: 0 0 10px #999;
+    width: 100%;
+    height: 80px;
+}
+
+header .header-title{
+    background: rgba(242,182,50,0.8);
+    box-shadow: 0 0 10px #888;
+    width: 100%;
+    height: 60px;
+    display: inline-block;
+    text-align: center;
+}
+
+header .header-title h2{
+    display: inline-block;
+    line-height: 60px;
+    font-weight: 600;
+    font-family: 微软雅黑;
+    letter-spacing: 0.2em;
+}
+
+header .header-title p{
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    height: 20px;
+    letter-spacing: 0.1em;
+    margin: 15px 0 0 30px;
+}
+
+
+
+/***************************      左侧导航      *****************************/
+.left-nav{
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.left-nav,
+.left-nav .content{
+    width: 240px;
+}
+
+.filterinput{
+    background-color:rgba(249, 244, 244, 0)!important;
+    border-radius:15px!important;
+    width:90%!important;
+    height:30px!important;
+    border:thin solid #FFF!important;
+    text-indent:0.5em!important;
+    font-weight:bold!important;
+    color:#FFF!important;
+}
+
+.left-nav #nav-list a{
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -o-text-overflow:ellipsis;
+    white-space:nowrap;
+    width:100%;
+    cursor: pointer;
+}
+
+.left-nav #nav-list>li a{
+    display: inline-block;
+}
+
+.left-nav #nav-list .signIn,
+.left-nav #nav-list .signUp{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+
+
+
+/*************************      订阅内容页面     **************************/
+.right_info{
+    position: relative;
+    margin-left: 280px;
+    padding-top: 30px;
+    overflow: hidden;
+}
+
+
+.selection-tool{
+    float: right;
+    margin-right: 20px;
+}
+
+.select-theme,
+.select-schema,
+.select-theme a,
+.select-schema ul,
+.select-schema ul li,
+.select-theme{
+    position: relative;
+    display: inline-block;
+}
+
+.select-theme,
+.select-schema{
+    float: right;
+}
+
+.select-theme{
+    margin: 9px 20px 0 0;
+}
+
+.sub-content{
+    clear: both;
+    float: none;
+    padding-top: 30px;
+}
+
+.sub-card {
+    width: 50%;
+    float: left;
+    margin-top: 30px;
+}
+
+.sub-card .content{
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px 0;
+    /*border: 1px solid #000;*/
+    background: #fff;
+    box-shadow: 0 0 3px #ddd;
+}
+
+.sub-img{
+     width: 100%;
+     text-align: center;
+}
+
+.sub-img img{
+    width: 90%;
+    text-align: center;
+    margin-top: -80px;
+    box-shadow: 0 0 8px #000;
+}
+
+.sub-title{
+    width: 90%;
+    margin: 25px auto 10px auto;
+    color: #333;
+    text-align: center;
+    font-size: 1rem;
+    height: 50px;
+    line-height: 25px;
+}
+
+.sub-intro{
+    height: 60px;
+    line-height: 20px;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    color: #666;
+    text-indent: 2em;
+}
+
+.sub-footer{
+    width: 90%;
+    padding-top: 10px;
+    margin: 30px auto 0 auto;
+    position: relative;
+}
+
+.sub-footer .sub-link{
+    position: absolute;
+    left: 10px;
+    top: -10px;
+    opacity: 0.7;
+    font-size: .8rem;
+}
+
+.sub-footer .sub-link i{
+    margin-right: 5px;
+}
+
+
+.sub-footer .sub-collect{
+    position: absolute;
+    right: 10px;
+    top: -10px;
+    color: #f2b632;
+    opacity: 0.7;
+}
+
+
+.sub-footer .sub-collect .fa-star{
+    display: none;
+}
+
+.sub-footer .sub-link:hover,
+.sub-footer .sub-collect:hover{
+    opacity: 1;
+}
+
+.sub-footer .sub-collect:hover .fa-star{
+    display: block;
+}
+
+.sub-footer .sub-collect:hover .fa-star-o{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 900px){
+    .sub-card {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:900px) and (max-width:1100px) {
+    .sub-title{
+        font-size: 0.9rem;
+    }
+    .sub-intro{
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .sub-title{
+        font-size: 0.9rem;
+    }
+    .sub-intro{
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and (max-width:610px){
+
+    .left-nav{
+        position: relative;
+    }
+
+    .left-nav,
+    .left-nav .content{
+        width: 100%;
+    }
+
+    .right_info{
+        margin-left: 0;
+    }
+
+    .selection-tool{
+        float: none;
+       clear: both;
+    }
+}
+
+
+
+
+/***********************    登录注册     ************************/
+
+.login-wrap{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 500px;
+    width: 350px;
+    margin-top: -175px;
+    margin-left: -175px;
+}
+
+.login-wrap .content{
+    text-align: center;
+}
+
+.login-wrap .content .sign-in-htm,
+.login-wrap .content .sign-up-htm{
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    position:absolute;
+    -webkit-transform:rotateY(180deg);
+    transform:rotateY(180deg);
+    -webkit-backface-visibility:hidden;
+    backface-visibility:hidden;
+    -webkit-transition:all .4s linear;
+    transition:all .4s linear;
+}
+.login-wrap .content .sign-in,
+.login-wrap .content .sign-up,
+.login-form .group .check{
+    display:none;
+}
+.login-wrap .content .tab,
+.login-form .group .label,
+.login-form .group .button{
+    text-transform:uppercase;
+}
+.login-wrap .content .tab{
+    font-size:20px;
+    padding-bottom:5px;
+    margin:0 15px 30px 0;
+    display:inline-block;
+    border-bottom:2px solid transparent;
+}
+.login-wrap .content .sign-in:checked + .tab,
+.login-wrap .content .sign-up:checked + .tab{
+    color:#fff;
+    border-color:#f2b632;
+}
+.login-form{
+    min-height:345px;
+    position:relative;
+    -webkit-perspective:1000px;
+    perspective:1000px;
+    -webkit-transform-style:preserve-3d;
+    transform-style:preserve-3d;
+}
+.login-form .group{
+    margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+    width:100%;
+    color:#fff;
+    display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+    border: none;
+    padding: 12px 20px;
+    border-radius: 20px;
+    background: rgba(255,255,255,.1);
+}
+.login-form .group input[data-type="password"]{
+    text-security:circle;
+    -webkit-text-security:circle;
+}
+
+.login-form .group span{
+    font-size: 12px;
+    color: #f2b632;
+    opacity: 0.9;
+}
+
+.login-form .group .label{
+    color:#aaa;
+    font-size:12px;
+}
+.login-form .group .button{
+    background:#f2b632;
+}
+.login-form .group label .icon{
+    width:15px;
+    height:15px;
+    border-radius:2px;
+    position:relative;
+    display:inline-block;
+    background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+    content:'';
+    width:10px;
+    height:2px;
+    background:#fff;
+    position:absolute;
+    -webkit-transition:all .2s ease-in-out 0s;
+    transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+    left:3px;
+    width:5px;
+    bottom:6px;
+    -webkit-transform:scale(0) rotate(0deg);
+    -ms-transform:scale(0) rotate(0deg);
+    transform:scale(0) rotate(0deg);
+}
+.login-form .group label .icon:after{
+    top:6px;
+    right:0;
+    -webkit-transform:scale(0) rotate(0deg);
+    -ms-transform:scale(0) rotate(0deg);
+    transform:scale(0) rotate(0deg);
+}
+.login-form .group .check:checked + label{
+    color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+    background:#f2b632;
+}
+.login-form .group .check:checked + label .icon:before{
+    -webkit-transform:scale(1) rotate(45deg);
+    -ms-transform:scale(1) rotate(45deg);
+    transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+    -webkit-transform:scale(1) rotate(-45deg);
+    -ms-transform:scale(1) rotate(-45deg);
+    transform:scale(1) rotate(-45deg);
+}
+.login-wrap .content .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+    -webkit-transform:rotate(0deg);
+    -ms-transform:rotate(0deg);
+    transform:rotate(0deg);
+}
+.login-wrap .content .sign-up:checked + .tab + .login-form .sign-up-htm{
+    -webkit-transform:rotate(0deg);
+    -ms-transform:rotate(0deg);
+    transform:rotate(0deg);
+}
+
+.hr{
+    height:2px;
+    margin:40px 0;
+    background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+    text-align:center;
+}
+
+
+
+
+/***********************    个人设置     ************************/
+.personal-setting .content{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.personal-setting .content h2{
+    margin: 40px 0;
+}
+
+
+.setting-content{
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.setting-content input[type="checkbox"]{
+    display: none;
+}
+.setting-content input[type="checkbox"]+label {
+    display: inline-block;
+    margin-top: 10px;
+    margin-left: 5px;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+}
+
+.setting-content label::before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background: #EEE;
+    vertical-align: middle;
+    -webkit-border-radius: 50%;
+    margin-right: 20px;
+    -webkit-box-sizing:border-box;
+    -webkit-transition:background ease-in .5s
+}
+
+.setting-content input[type="checkbox"]:checked+label::before{
+    background-color: rgb(53, 183, 111);
+    border: 5px #EEEEEE solid;
+}
+
+
+/***********************    订阅管理     ************************/
+.tree {
+    clear: both;
+    float: none;
+    min-height:20px;
+    padding:19px;
+    margin-bottom:20px;
+    background-color:#fbfbfb;
+    border:1px solid #999;
+    -webkit-border-radius:4px;
+    -moz-border-radius:4px;
+    border-radius:4px;
+    -webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05)
+}
+.tree li {
+    list-style-type:none;
+    margin:0;
+    padding:10px 5px 0 5px;
+    position:relative
+}
+.tree li::before, .tree li::after {
+    content:'';
+    left:-20px;
+    position:absolute;
+    right:auto
+}
+.tree li::before {
+    border-left:1px solid #999;
+    bottom:50px;
+    height:100%;
+    top:0;
+    width:1px
+}
+.tree li::after {
+    border-top:1px solid #999;
+    height:20px;
+    top:25px;
+    width:25px
+}
+.tree li span {
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border:1px solid #999;
+    border-radius:5px;
+    display:inline-block;
+    padding:3px 8px;
+    text-decoration:none
+}
+.tree li.parent_li>span {
+    cursor:pointer
+}
+.tree>ul>li::before, .tree>ul>li::after {
+    border:0
+}
+.tree li:last-child::before {
+    height:30px
+}
+.tree li.parent_li>span:hover, .tree li.parent_li>span:hover+ul li span {
+    background:#eee;
+    border:1px solid #94a0b4;
+    color:#000
+}
+
+.add-sub{
+    position: absolute;
+    right: 20px;
+    top: 50px;
+}
+
+.add-sub a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: rgba(0,0,0,0.4);
+    border-radius: 20px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+}
+
+.add-window{
+    position: fixed;
+    z-index: 10;
+    width: 400px;
+    height: 260px;
+    top:50%;
+    left:50%;
+    margin-left: -200px;
+    margin-top: -130px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 0 3px #999;
+    text-align: center;
+    display: none;
+}
+
+.sub-link input{
+    width: 80%;
+    padding: 17px 20px !important;
+}
+
+.sub-link{
+    width: 100%;
+    margin: 40px 0 5px 0;
+}
+.grouping{
+    width: 100%;
+}
+
+.grouping select{
+    width: 80%;
+    height: 38px;
+}
+
+.add-window button{
+    width: 80%;
+    padding: 10px 0;
+    text-align: center;
+    background: #f2b632;
+    color: #fff;
+}
+
+.add-window .window-close{
+    color: #333;
+    position: absolute;
+    top: 15px;
+    right:15px;
+}
+
+.sub-delete{
+    float: right;
+    cursor: pointer;
+}

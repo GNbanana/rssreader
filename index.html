@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>快瞄-首页</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--字体css插件-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--导航css样式-->
+    <link rel="stylesheet" href="css/jquery-accordion-menu.css">
+    <link rel="stylesheet" href="css/jquery-labelauty.css">
+    <!--全局样式-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+
+    <!--导航js插件-->
+    <script src="js/jquery-accordion-menu.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
+
+        });
+
+        $(function(){
+            //顶部导航切换
+            $("#nav-list li").click(function(){
+                $("#nav-list li.active").removeClass("active");
+                $(this).addClass("active");
+            })
+        })
+    </script>
+
+</head>
+
+
+<body>
+
+<header>
+    <div class="content">
+
+        <div class="header-title">
+
+            <h2>快瞄</h2>
+            <p>你的订阅管家</p>
+
+        </div>
+
+    </div>
+</header>
+
+<div class="main">
+
+
+
+    <!-------左侧导航--------->
+    <div class="left-nav">
+
+        <div class="content">
+
+            <div id="jquery-accordion-menu" class="jquery-accordion-menu red">
+
+                <div class="jquery-accordion-menu-header" id="form"></div>
+
+                <ul id="nav-list">
+
+                    <li><a href="signIn.html">
+                        <span class="signIn">登录</span>
+                        <span class="signUp">注册</span>
+                    </a></li>
+
+                    <li class="active"><a href="#"><i class="fa fa-user"></i>我的订阅</a>
+                        <ul class="submenu">
+
+                            <li><a href="index.html">全部</a></li>
+
+                            <li><a href="#">科技专栏</a>
+                                <ul class="submenu">
+                                    <li><a href="#">知乎专栏</a></li>
+                                    <li><a href="#">简书专栏</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">有趣的博客</a>
+                                <ul class="submenu">
+                                    <li><a href="#">tombkeeper的和谐blog</a></li>
+                                    <li><a href="#">joyee cheung - 博客园</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">微信订阅</a>
+                                <ul class="submenu">
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="setting.html"><i class="fa fa-cog"></i>个人设置</a></li>
+
+                    <li><a href="sub_star.html"><i class="fa fa-star-o"></i>星标订阅</a></li>
+
+                    <li><a href="sub_manage.html"><i class="fa fa-folder-open"></i>订阅管理</a></li>
+
+                </ul>
+
+                <div class="jquery-accordion-menu-footer"></div>
+
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <!----------右侧订阅内容---------->
+    <div class="right_info">
+
+        <div class="content">
+
+            <div class="selection-tool">
+
+                <div class="select-schema">
+
+                    <ul>
+                        <li><input class="card-pattern" type="radio" name="radio" data-labelauty="卡片模式"></li>
+                        <li><input class="img-pattern" type="radio" name="radio" data-labelauty="图片模式"></li>
+                        <li><input class="word-pattern" type="radio" name="radio" data-labelauty="文字模式"></li>
+                    </ul>
+
+                </div>
+
+                <div class="select-theme">
+
+                    <a><i class="fa fa-magic fa-lg"></i></a>
+
+                </div>
+
+
+            </div>
+
+            <div class="sub-content">
+
+                <div class="sub-card">
+                    <div class="content">
+
+                        <div class="sub-img">
+                            <img src="images/sub-img/sub-img1.jpg" alt="">
+                        </div>
+
+                        <h4 class="sub-title">“我在故宫修文物”的另一种姿态：用科学研究让文物好好活下去</h4>
+                        <p class="sub-intro">《红楼梦》四十九回，一片琉璃世界，黛玉罩了一件大红羽纱面白狐狸里鹤氅，白雪衬着红裳，真真比画还好。你可知道这 “羽纱”到底是什么料子？这正是实验室的研究工作之一：检测纺织品材质。因为只有知道了确切材质，才能更有针对性地进行修复。</p>
+
+                        <div class="sub-footer">
+                            <a class="sub-link" href="http://blog.sina.com.cn/s/blog_62aad6640102xuov.html?tj=1" target="_blank"><i class="fa fa-link"></i>原文地址</a>
+                            <a class="sub-collect"><i class="fa fa-star-o fa-lg"></i><i class="fa fa-star fa-lg"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="sub-card">
+                    <div class="content">
+
+                        <div class="sub-img">
+                            <img src="images/sub-img/sub-img1.jpg" alt="">
+                        </div>
+
+                        <h4 class="sub-title">“我在故宫修文物”的另一种姿态：用科学研究让文物好好活下去</h4>
+
+                        <p class="sub-intro">《红楼梦》四十九回，一片琉璃世界，黛玉罩了一件大红羽纱面白狐狸里鹤氅，白雪衬着红裳，真真比画还好。你可知道这 “羽纱”到底是什么料子？这正是实验室的研究工作之一：检测纺织品材质。因为只有知道了确切材质，才能更有针对性地进行修复。</p>
+
+                        <div class="sub-footer">
+                            <a class="sub-link" href="http://blog.sina.com.cn/s/blog_62aad6640102xuov.html?tj=1" target="_blank"><i class="fa fa-link"></i>原文地址</a>
+                            <a class="sub-collect"><i class="fa fa-star-o fa-lg"></i><i class="fa fa-star fa-lg"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="sub-card">
+                    <div class="content">
+
+                        <div class="sub-img">
+                            <img src="images/sub-img/sub-img1.jpg" alt="">
+                        </div>
+
+                        <h4 class="sub-title">“我在故宫修文物”的另一种姿态：用科学研究让文物好好活下去</h4>
+                        <p class="sub-intro">《红楼梦》四十九回，一片琉璃世界，黛玉罩了一件大红羽纱面白狐狸里鹤氅，白雪衬着红裳，真真比画还好。你可知道这 “羽纱”到底是什么料子？这正是实验室的研究工作之一：检测纺织品材质。因为只有知道了确切材质，才能更有针对性地进行修复。</p>
+
+                        <div class="sub-footer">
+                            <a class="sub-link" href="http://blog.sina.com.cn/s/blog_62aad6640102xuov.html?tj=1" target="_blank"><i class="fa fa-link"></i>原文地址</a>
+                            <a class="sub-collect"><i class="fa fa-star-o fa-lg"></i><i class="fa fa-star fa-lg"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="sub-card">
+                    <div class="content">
+
+                        <div class="sub-img">
+                            <img src="images/sub-img/sub-img1.jpg" alt="">
+                        </div>
+
+                        <h4 class="sub-title">“我在故宫修文物”的另一种姿态：用科学研究让文物好好活下去</h4>
+                        <p class="sub-intro">《红楼梦》四十九回，一片琉璃世界，黛玉罩了一件大红羽纱面白狐狸里鹤氅，白雪衬着红裳，真真比画还好。你可知道这 “羽纱”到底是什么料子？这正是实验室的研究工作之一：检测纺织品材质。因为只有知道了确切材质，才能更有针对性地进行修复。</p>
+
+                        <div class="sub-footer">
+                            <a class="sub-link" href="http://blog.sina.com.cn/s/blog_62aad6640102xuov.html?tj=1" target="_blank"><i class="fa fa-link"></i>原文地址</a>
+                            <a class="sub-collect"><i class="fa fa-star-o fa-lg"></i><i class="fa fa-star fa-lg"></i></a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+</footer>
+
+
+
+</body>
+
+<!--单选框控件-->
+<script src="js/jquery-labelauty.js"></script>
+
+<!--全局js-->
+<script src="js/style.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $(':input').labelauty();
+    });
+
+
+</script>
+
+</html>

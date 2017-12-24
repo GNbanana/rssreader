@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>个人设置</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--字体css插件-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--导航css样式-->
+    <link rel="stylesheet" href="css/jquery-accordion-menu.css">
+
+    <!--全局样式-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+
+    <!--导航js插件-->
+    <script src="js/jquery-accordion-menu.js"></script>
+
+    <script>
+        jQuery(document).ready(function () {
+            jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
+
+        });
+
+        $(function(){
+            //顶部导航切换
+            $("#nav-list li").click(function(){
+                $("#nav-list li.active").removeClass("active");
+                $(this).addClass("active");
+            })
+        })
+    </script>
+
+</head>
+
+
+<body>
+
+<header>
+    <div class="content">
+
+        <div class="header-title">
+
+            <h2>快瞄</h2>
+            <p>你的订阅管家</p>
+
+        </div>
+
+    </div>
+</header>
+
+<div class="main">
+
+
+
+    <!-------左侧导航--------->
+    <div class="left-nav">
+
+        <div class="content">
+
+            <div id="jquery-accordion-menu" class="jquery-accordion-menu red">
+
+                <div class="jquery-accordion-menu-header" id="form"></div>
+
+                <ul id="nav-list">
+
+                    <li><a href="signIn.html">
+                        <span class="signIn">登录</span>
+                        <span class="signUp">注册</span>
+                    </a></li>
+
+                    <li ><a href="#"><i class="fa fa-user"></i>我的订阅</a>
+                        <ul class="submenu">
+
+                            <li><a href="index.html">全部</a></li>
+
+                            <li><a href="#">科技专栏</a>
+                                <ul class="submenu">
+                                    <li><a href="#">知乎专栏</a></li>
+                                    <li><a href="#">简书专栏</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">有趣的博客</a>
+                                <ul class="submenu">
+                                    <li><a href="#">tombkeeper的和谐blog</a></li>
+                                    <li><a href="#">joyee cheung - 博客园</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">微信订阅</a>
+                                <ul class="submenu">
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="active"><a href="setting.html"><i class="fa fa-cog"></i>个人设置</a></li>
+
+                    <li><a href="#"><i class="fa fa-star-o"></i>星标订阅</a></li>
+
+                    <li><a href="sub_manage.html"><i class="fa fa-folder-open"></i>订阅管理</a></li>
+
+                </ul>
+
+                <div class="jquery-accordion-menu-footer"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <!----------右侧设置内容---------->
+    <div class="right_info personal-setting">
+
+        <div class="content">
+
+            <h2>个人设置</h2>
+            
+            <div class="setting-content">
+                
+                <input id="desktop-push" type="checkbox">
+                <label for="desktop-push">桌面推送</label>
+
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+
+
+<!--全局js-->
+<script src="js/style.js"></script>
+
+<script type="text/javascript">
+    $(function(){
+        $(':input').labelauty();
+    });
+
+
+</script>
+
+</html>

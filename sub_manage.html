@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>快瞄-订阅管理</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--字体css插件-->
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+
+    <!--bootstrap样式-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+    <!--导航css样式-->
+    <link rel="stylesheet" href="css/jquery-accordion-menu.css">
+
+    <!--全局样式-->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--bootstrap样式-->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+
+
+
+    <script src="js/jquery.min.js"></script>
+
+    <!--导航js插件-->
+    <script src="js/jquery-accordion-menu.js"></script>
+
+
+    <script>
+        //树形菜单
+        $(function(){
+
+            $('.tree li:has(ul)').addClass('parent_li').find(' > span').attr('title', 'Collapse this branch');
+
+            $('.tree li.parent_li > span').on('click', function (e) {
+
+                var children = $(this).parent('li.parent_li').find(' > ul > li');
+
+                if (children.is(":visible")) {
+
+                    children.hide('fast');
+
+                    $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+
+                } else {
+
+                    children.show('fast');
+
+                    $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+
+                }
+
+                e.stopPropagation();
+
+            });
+
+        });
+
+
+        jQuery(document).ready(function () {
+            jQuery("#jquery-accordion-menu").jqueryAccordionMenu();
+
+        });
+
+        $(function(){
+            //顶部导航切换
+            $("#nav-list li").click(function(){
+                $("#nav-list li.active").removeClass("active");
+                $(this).addClass("active");
+            })
+        })
+
+
+
+
+    </script>
+
+</head>
+
+
+<body>
+
+<header>
+    <div class="content">
+
+        <div class="header-title">
+
+            <h2>快瞄</h2>
+            <p>你的订阅管家</p>
+
+        </div>
+
+    </div>
+</header>
+
+<div class="main">
+
+
+
+    <!-------左侧导航--------->
+    <div class="left-nav">
+
+        <div class="content">
+
+            <div id="jquery-accordion-menu" class="jquery-accordion-menu red">
+
+                <div class="jquery-accordion-menu-header" id="form"></div>
+
+                <ul id="nav-list">
+
+                    <li><a href="signIn.html">
+                        <span class="signIn">登录</span>
+                        <span class="signUp">注册</span>
+                    </a></li>
+
+                    <li><a href="#"><i class="fa fa-user"></i>我的订阅</a>
+                        <ul class="submenu">
+
+                            <li><a href="index.html">全部</a></li>
+
+                            <li><a href="#">科技专栏</a>
+                                <ul class="submenu">
+                                    <li><a href="#">知乎专栏</a></li>
+                                    <li><a href="#">简书专栏</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">有趣的博客</a>
+                                <ul class="submenu">
+                                    <li><a href="#">tombkeeper的和谐blog</a></li>
+                                    <li><a href="#">joyee cheung - 博客园</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="#">微信订阅</a>
+                                <ul class="submenu">
+                                    <li><a href="#"></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li><a href="setting.html"><i class="fa fa-cog"></i>个人设置</a></li>
+
+                    <li><a href="sub_star.html"><i class="fa fa-star-o"></i>星标订阅</a></li>
+
+                    <li class="active"><a href="sub_manage.html"><i class="fa fa-folder-open"></i>订阅管理</a></li>
+
+                </ul>
+
+                <div class="jquery-accordion-menu-footer"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <!----------右侧订阅内容---------->
+    <div class="right_info">
+
+        <div class="content">
+
+            <div class="tree well">
+
+                <ul class="tree-ul1">
+
+                    <li>
+
+                        <span><i class="icon-folder-open"></i> 科技专栏</span>
+
+                        <ul class="tree-ul2">
+
+                            <li>
+
+                                <span><i class="icon-minus-sign"></i> 知乎专栏</span>
+
+                                <ul class="tree-ul3">
+
+                                    <li>
+
+                                        <span><i class="icon-leaf"></i> 订阅1</span><span class="sub-delete">删除</span>
+
+                                    </li>
+
+                                    <li>
+
+                                        <span><i class="icon-leaf"></i> 订阅2</span><span class="sub-delete">删除</span>
+
+                                    </li>
+
+                                    <li>
+
+                                        <span><i class="icon-leaf"></i> 订阅3</span><span class="sub-delete">删除</span>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+
+                                <span><i class="icon-minus-sign"></i> 简书专栏</span>
+
+                                <ul>
+
+                                    <li>
+
+                                        <span><i class="icon-leaf"></i> 订阅4</span><span class="sub-delete">删除</span>
+
+                                    </li>
+
+                                    <li>
+
+                                        <span><i class="icon-leaf"></i> 订阅5</span><span class="sub-delete">删除</span>
+
+                                    </li>
+
+                                    <li>
+
+                                        <span><i class="icon-leaf"></i> 订阅6</span><span class="sub-delete">删除</span>
+
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+
+                        <span><i class="icon-folder-open"></i>有趣的博客</span>
+
+                        <ul class="tree-ul2">
+
+                            <li>
+
+                                <span><i class="icon-leaf"></i> tombkeeper的和谐blog</span><span class="sub-delete">删除</span>
+
+                            </li>
+
+                            <li>
+
+                                <span><i class="icon-leaf"></i> joyee cheung - 博客园</span><span class="sub-delete">删除</span>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                    <li>
+
+                        <span><i class="icon-folder-open"></i>微信订阅</span>
+
+                        <ul class="tree-ul2">
+
+                            <li>
+
+                                <span><i class="icon-leaf"></i> 订阅7</span><span class="sub-delete">删除</span>
+
+                            </li>
+
+                            <li>
+
+                                <span><i class="icon-leaf"></i> 订阅8</span><span class="sub-delete">删除</span>
+
+                            </li>
+
+                            <li>
+
+                                <span><i class="icon-leaf"></i> 订阅9</span><span class="sub-delete">删除</span>
+
+                            </li>
+
+                        </ul>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+            <div class="add-sub">
+                <a><i class="fa fa-plus fa-lg"></i></a>
+            </div>
+
+            <div class="add-window">
+
+                <span class="window-close"><i class="fa fa-close"></i></span>
+
+                <h4>添加订阅</h4>
+                <div class="sub-link">
+                    <input type="text" placeholder="订阅链接">
+                </div>
+                <div class="grouping">
+                    <select>
+                        <option value ="0" selected disabled>选择分组</option>
+                        <option value ="1">科技专栏</option>
+                        <option value="2">有趣的博客</option>
+                        <option value="3">微信订阅</option>
+                    </select>
+                </div>
+
+                <button type="submit">确认添加</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+</footer>
+
+
+
+</body>
+
+
+<!--全局js-->
+<script src="js/style.js"></script>
+
+
+</html>

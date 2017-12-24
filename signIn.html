@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!--全局样式-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <style>
+        body{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            margin:0;
+            padding: 0;
+            background: #252839;
+        }
+    </style>
+
+</head>
+<body>
+<div class="login-wrap">
+    <div class="content">
+        <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">登录</label>
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">注册</label>
+        <div class="login-form">
+            <div class="sign-in-htm">
+                <div class="group">
+                    <input type="text" class="input si-userName" placeholder="用户名">
+                    <span></span>
+                </div>
+                <div class="group">
+                    <input type="password" class="input si-password" data-type="password" placeholder="密码">
+                    <span></span>
+                </div>
+                <div class="group">
+                    <input type="submit" class="button si-submit" value="登录">
+                </div>
+                <div class="hr"></div>
+                <div class="foot-lnk">
+                    <a href="#">忘记密码</a>
+                </div>
+            </div>
+            <div class="sign-up-htm">
+                <div class="group">
+                    <input type="text" class="input su-userName" placeholder="用户名">
+                    <span></span>
+                </div>
+                <div class="group">
+                    <input type="password" class="input su-password" data-type="password" placeholder="密码">
+                    <span></span>
+                </div>
+                <div class="group">
+                    <input type="password" class="input su2-password" data-type="password" placeholder="确认密码">
+                    <span></span>
+                </div>
+                <div class="group">
+                    <input type="submit" class="button su-submit" value="注册">
+                </div>
+                <div class="hr"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/style.js"></script>
+</html>
